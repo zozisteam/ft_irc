@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Client.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mraspors <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/03 19:10:46 by alalmazr          #+#    #+#             */
+/*   Updated: 2023/06/17 14:47:38 by mraspors         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Client.hpp"
 
 // Default const
@@ -87,12 +99,14 @@ std::string Client::get_host() const
 // send msd
 void Client::send(const std::string &msg) const
 {
+	std::string a = msg;
 	//implement send
 }
 
 // Reply to the client
 void Client::reply(const std::string &msg)
 {
+	std::string a = msg;
 	// implement reply
 }
 
