@@ -6,7 +6,7 @@
 /*   By: alalmazr <alalmazr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:09:42 by alalmazr          #+#    #+#             */
-/*   Updated: 2023/06/24 15:26:42 by alalmazr         ###   ########.fr       */
+/*   Updated: 2023/06/25 14:46:36 by alalmazr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,13 @@ class KILL : public Command
 public:
     KILL(Server* server);
     void execute(Client* client, std::vector<std::string> args) override;
+};
+
+class TOPIC : public Command
+{
+	public:
+	TOPIC(Server *server);
+	void execute(Client *client, std::vector<std::string> args) override;
 };
 
 class MODE : public Command

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Client.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mraspors <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alalmazr <alalmazr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 19:10:46 by alalmazr          #+#    #+#             */
-/*   Updated: 2023/06/17 14:47:38 by mraspors         ###   ########.fr       */
+/*   Updated: 2023/06/25 14:54:04 by alalmazr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,8 +113,13 @@ void Client::reply(const std::string &msg)
 // irc welcome msg
 void Client::welcome()
 {
-	// if _state is not 1 or uname is empty or name is empty or nick is empty:
-    //     return
+    if (state != 1 || uname.empty() || name.empty() || nick.empty())
+		return;
+    
+    state = 2;
+    this->reply("welcome " + nick);
 
-    // welcome msg
+    char message[100];
+    std::string message = host + ":" + std::to_string(port) + " is now known as " + nick + ".";
+    // log(message);
 }

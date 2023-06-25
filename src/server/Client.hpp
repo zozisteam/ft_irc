@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Client.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mraspors <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alalmazr <alalmazr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 19:10:46 by alalmazr          #+#    #+#             */
-/*   Updated: 2023/06/11 15:38:50 by mraspors         ###   ########.fr       */
+/*   Updated: 2023/06/25 14:26:52 by alalmazr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ public:
 	std::string get_name() const;
 	std::string get_host() const;
 
-	// check state
+	//get prefix???
+
 	// send recieve actions
 	void send(const std::string &msg) const;
 	void reply(const std::string &msg);
